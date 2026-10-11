@@ -1,9 +1,13 @@
-# DATQ 智能问数
+# DatQ 智能问数系统
 
 
 > 用自然语言查询数据库的 AI 数据分析平台:用中文提问,自动生成 SQL、安全执行、图表可视化,支持知识库增强与多数据源管理。
 
 提问 → NL2SQL 生成 → SQL 安全校验 → 执行 → 表格/图表展示 → CSV 导出,全链路一站式完成。
+
+## 🏗 系统架构
+
+<img width="1792" height="1024" alt="datq-system-architecture_1791681985" src="https://github.com/user-attachments/assets/c4ab3ef8-d559-48fc-b9cb-da083a6ddeff" />
 
 ## ✨ 核心特性
 
@@ -16,24 +20,21 @@
 - **系统管理**:用户、角色、查询日志、操作日志、查询趋势与数据源分布统计
 - **优雅降级**:未配置 LLM Key 时自动降级为知识库示例匹配,保证问数链路始终可用
 
-## 🏗 系统架构
 
-<img width="1792" height="1024" alt="datq-system-architecture_1791681985" src="https://github.com/user-attachments/assets/c4ab3ef8-d559-48fc-b9cb-da083a6ddeff" />
 ## 🖥 UI 展示
 
-| 登录 | 智能问数 |
-| --- | --- |
-| ![登录](docs/images/login.png) | ![智能问数](docs/images/chat.png) |
+<img width="2549" height="1242" alt="image" src="https://github.com/user-attachments/assets/24ad8c15-0694-4265-9de8-10fba7e09df8" />
 
-| 数据看板 | 数据源管理 |
-| --- | --- |
-| ![数据看板](docs/images/dashboard.png) | ![数据源](docs/images/datasource.png) |
+<img width="2549" height="1242" alt="image" src="https://github.com/user-attachments/assets/151311b0-548e-47e7-849e-ab6b81c618c4" />
 
-| 知识库 | 语义层 / 系统管理 |
-| --- | --- |
-| ![知识库](docs/images/knowledge.png) | ![语义层](docs/images/semantic.png) |
+<img width="2549" height="1242" alt="image" src="https://github.com/user-attachments/assets/268f0015-d9e2-44bf-8cb9-5bbaacd510db" />
 
-> 截图文件请放置于 `docs/images/` 目录,文件名与上表对应(建议分辨率 ≥1600×900)。
+<img width="2549" height="1242" alt="image" src="https://github.com/user-attachments/assets/5cd88f8b-3ea3-4c9b-9988-dd1b05dedad5" />
+
+<img width="2549" height="1242" alt="image" src="https://github.com/user-attachments/assets/98a858cc-cd8d-411f-9480-4ebd5f965f54" />
+
+
+
 
 ## 🚀 快速上手
 
