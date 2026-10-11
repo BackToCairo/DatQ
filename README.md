@@ -128,19 +128,7 @@ DatQ/
 
 启动后端后访问 Swagger UI:`http://localhost:8004/docs`(Docker 方式为 `:8000/docs`),共 40+ 个接口,覆盖认证、问数、会话、数据源、知识库、语义层、系统管理。
 
-## 🧪 测试
+## 联系我
 
-```bash
-cd backend
-.venv\Scripts\python -m pytest tests/ -v     # 冒烟测试: 应用装配/路由/鉴权/SQL校验, 不依赖外部服务
-```
+<img width="880" height="1375" alt="5d04c127c83704fd63cb1f095b22b9eb" src="https://github.com/user-attachments/assets/006121ee-09e2-4111-9b28-6f4cfc8b11fc" />
 
-## 📝 常见问题
-
-- **问数提示“LLM API Key 未配置”**:在 `backend/.env` 填入 `LLM_API_KEY` 并重启后端;不配置也能用,会自动降级为知识库示例匹配。
-- **配置了 DeepSeek 后 RAG 检索报错**:DeepSeek 不提供 embeddings 接口,请设置 `LLM_EMBEDDING_ENABLED=false`。
-- **前端打不开 / 接口 404**:确认后端在 8004 端口(或同步修改 `frontend/vite.config.ts` 的代理目标)。
-
-## License
-
-MIT
