@@ -1,5 +1,6 @@
 # DATQ 智能问数
 
+
 > 用自然语言查询数据库的 AI 数据分析平台:用中文提问,自动生成 SQL、安全执行、图表可视化,支持知识库增强与多数据源管理。
 
 提问 → NL2SQL 生成 → SQL 安全校验 → 执行 → 表格/图表展示 → CSV 导出,全链路一站式完成。
@@ -17,38 +18,7 @@
 
 ## 🏗 系统架构
 
-```mermaid
-flowchart LR
-    subgraph 前端
-        UI[React 18 + Ant Design 5<br/>Vite · ECharts · Zustand]
-    end
-    subgraph 后端
-        API[FastAPI<br/>JWT 认证 · 限流 · RBAC]
-        NL2SQL[NL2SQL 引擎<br/>OpenAI 兼容协议]
-        RAG[RAG 服务<br/>ChromaDB 内嵌]
-        Guard[SQL 校验器<br/>sqlglot]
-        Engine[查询引擎<br/>PG / MySQL / SQLite 连接池]
-    end
-    subgraph 存储
-        PG[(PostgreSQL<br/>业务库 + 元数据)]
-        VEC[(ChromaDB<br/>.chroma_data)]
-        DS[(外部业务数据源)]
-    end
-    subgraph 模型服务
-        LLM[DeepSeek / OpenAI<br/>Chat Completions]
-    end
-
-    UI -->|HTTP + JWT| API
-    API --> NL2SQL
-    NL2SQL <-->|检索 DDL/文档/SQL示例| RAG
-    RAG --- VEC
-    NL2SQL --> LLM
-    NL2SQL --> Guard --> Engine
-    API --- PG
-    Engine --- DS
-    Engine -->|查询结果| API
-```
-
+<img width="1792" height="1024" alt="datq-system-architecture_1791681985" src="https://github.com/user-attachments/assets/c4ab3ef8-d559-48fc-b9cb-da083a6ddeff" />
 ## 🖥 UI 展示
 
 | 登录 | 智能问数 |
